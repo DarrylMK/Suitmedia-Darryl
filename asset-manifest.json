@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Suitmedia-Darryl/static/css/main.ed3ba883.css",
+    "main.js": "/Suitmedia-Darryl/static/js/main.f179ecc9.js",
+    "index.html": "/Suitmedia-Darryl/index.html",
+    "main.ed3ba883.css.map": "/Suitmedia-Darryl/static/css/main.ed3ba883.css.map",
+    "main.f179ecc9.js.map": "/Suitmedia-Darryl/static/js/main.f179ecc9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed3ba883.css",
+    "static/js/main.f179ecc9.js"
+  ]
+}
