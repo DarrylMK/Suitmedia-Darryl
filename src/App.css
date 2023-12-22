@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  background-color: rgb(255, 137, 27);
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 5rem;
+  padding-block: .3rem;
+  color: #fff;
+  transition: top .5s ease, background-color 1s ease-in-out;
+  z-index: 999;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar.scrolled {
+  top: -100%;
+  background-color: rgba(255, 137, 27, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  z-index: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.menu li {
+  cursor: pointer;
+  font-size: 17px;
+  padding-block-end: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu li::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  bottom: 0;
+  left: 100%;
+  transition: left .3s ease-in;
+}
+
+.menu li.active::before, .menu li:hover::before {
+  left: 0;
+}
+
+.banner {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.banner .background {
+  position: absolute;
+  z-index: -99;
+  top: 0;
+  left: 0;
+  height: 450px;
+  width: 100%;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 65%, 100% 0%);
+  background-image: url('https://suitmedia.static-assets.id/storage/files/601/6.jpg'); /* background-position: center; */
+
+}
+
+.banner .text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.banner .text h1, .banner .text h5 {
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner .text h1 {
+  font-weight: 500;
+  width: fit-content;
+  margin: auto;
+}
+
+.banner .text h5 {
+  font-weight: 350;
+}
+
+.container {
+  width: 85vw;
+  height: auto;
+  margin: 30px auto;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tools-input {
+  display: flex;
+  gap: 25px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group select {
+  border-radius: 25px;
+  padding: 3px;
+  width: 90px;
+  height: 30px;
+}
+
+.cards {
+  margin-block: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.card {
+  height: 320px;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.35);
+}
+
+.card img {
+  height: 180px;
+}
+
+.card-info {
+  height: 95px;
+  width: 210px;
+  padding: 20px;
+}
+
+.card-info .date {
+  font-size: 15px;
+  color: #a5a5a5;
+}
+
+.card-info .title {
+  font-weight: bold;
+  font-size: 18px;
+  max-height: 4em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
