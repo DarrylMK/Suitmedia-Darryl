@@ -5,7 +5,7 @@ import Banner from "./components/banner";
 import Container from "./components/container";
 
 function App() {
-  const [menu, setMenu] = useState("Work");
+  const [menu, setMenu] = useState("Ideas");
   const [data, setData] = useState([]);
 
   useEffect(() => {
