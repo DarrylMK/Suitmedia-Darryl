@@ -3,7 +3,14 @@ import Card from "./card";
 
 const Container = () => {
     const [pageSize, setPageSize] = useState(10)
-    const [pageSort, setPageSort] = useState('published_at')
+    const [pageSort, setPageSort] = useState('-published_at')
+    const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://suitmedia-backend.suitdev.com/api/ideas?page[number]=1&page[size]=${pageSize}&append[]=small_image&append[]=medium_image&sort=${pageSort}`)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, [pageSize, pageSort]);
 
     const handleSizeChange = (e) => {
         const value = e.target.value;
@@ -48,8 +55,8 @@ const Container = () => {
         <div className="input-group">
             <label htmlFor="sort">Sort by:</label>
             <select onChange={handleSortChange} value={pageSort} id="sort">
-                <option value="published_at">Newest</option>
-                <option value="-published_at">Latest</option>
+                <option value="-published_at">Newest</option>
+                <option value="published_at">Latest</option>
             </select>
         </div>
         </div>
