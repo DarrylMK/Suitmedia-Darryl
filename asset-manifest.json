@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Suitmedia-Darryl/static/css/main.9d642e7a.css",
-    "main.js": "/Suitmedia-Darryl/static/js/main.598af4ef.js",
+    "main.js": "/Suitmedia-Darryl/static/js/main.c007af53.js",
     "index.html": "/Suitmedia-Darryl/index.html",
     "main.9d642e7a.css.map": "/Suitmedia-Darryl/static/css/main.9d642e7a.css.map",
-    "main.598af4ef.js.map": "/Suitmedia-Darryl/static/js/main.598af4ef.js.map"
+    "main.c007af53.js.map": "/Suitmedia-Darryl/static/js/main.c007af53.js.map"
   },
   "entrypoints": [
     "static/css/main.9d642e7a.css",
-    "static/js/main.598af4ef.js"
+    "static/js/main.c007af53.js"
   ]
 }
